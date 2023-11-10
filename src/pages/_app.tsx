@@ -1,15 +1,20 @@
-import { InjectedConnector, StarknetConfig } from '@starknet-react/core'
-import type { AppProps } from 'next/app'
+import '../styles/globals.css'
+import React from 'react'
+import RootLayout from '../components/Layout'
+import { WalletProvider } from "../modules/wallet/services/context";
+
+
+interface AppProps {
+  Component: React.ElementType;
+  pageProps: any;
+}
 
 export default function App({ Component, pageProps }: AppProps) {
-  const connectors = [
-    new InjectedConnector({ options: { id: 'braavos' } }),
-    new InjectedConnector({ options: { id: 'argentX' } }),
-  ]
-
   return (
-    <StarknetConfig autoConnect connectors={connectors}>
-      <Component {...pageProps} />
-    </StarknetConfig>
-  )
+    <RootLayout>
+      <WalletProvider>
+        <Component {...pageProps} />
+      </WalletProvider>
+    </RootLayout>
+  );  
 }
