@@ -12,12 +12,12 @@ const Header = () => {
             <Image
               width={36}
               height={36}
-              src="/zkJ0M.png"
+              src="/SuperLancers.png"
               className="w-20 md:w-15"
               alt="logo"
             />
             {/* <p className="text-2xl font-bold ml-2 text-gradient z-10">
-              ZKJ0M
+              SuperLancers
             </p> */}
           </div>
         </Link>
@@ -25,10 +25,17 @@ const Header = () => {
         <div className="flex items-center">
           {" "}
           {/* Added "items-center" class */}
-          <Link href="/verification">
+          <Link href="/home">
             <div className="items-center" style={{ height: "40px" }}>
               <p className="text-xl font-bold ml-2 nav-text pr-2 z-10">
-                Verification
+                Home
+              </p>
+            </div>
+          </Link>
+          <Link href="/quests">
+            <div className="items-center" style={{ height: "40px" }}>
+              <p className="text-xl font-bold ml-2 nav-text pr-2 z-10">
+                Quests
               </p>
             </div>
           </Link>
@@ -39,11 +46,18 @@ const Header = () => {
               </p>
             </div>
           </Link>
+          <Link href="/profile">
+            <div className="items-center" style={{ height: "40px" }}>
+              <p className="text-xl font-bold ml-2 nav-text pr-2 z-10">
+                Profile
+              </p>
+            </div>
+          </Link>
           <div className="items-center">
             <Link href="/betNow">
               <Button>
                 {/* Use the Button component here */}
-                Bet Now
+                Connect Wallet
               </Button>
             </Link>
           </div>
