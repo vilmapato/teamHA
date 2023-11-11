@@ -2,6 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
+html,
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Solanel", sans-serif;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #000000;
+  color: white;
+  -ms-overflow-style: none; /* IE and Edge */
+}
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Custom Text Gradient, dont remove this is for the text */
+.text-gradient {
+  background: linear-gradient(180deg, #f7ae7c, #4a28ad);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;

@@ -1,19 +1,16 @@
 import React from 'react';
 
-interface ButtonProps {
-  label: string;
-  onClick: () => void;
+interface BoxProps {
+  children: React.ReactNode; // Accept any valid React node
+  className?: string; // Optional className string
 }
 
-const BlackBox: React.FC<ButtonProps> = ({ label, onClick }) => {
+const Box: React.FC<BoxProps> = ({ children, className }) => {
   return (
-    <button
-      onClick={onClick}
-      className="bg-black text-white py-2 px-4 border border-black rounded transition ease-in-out duration-300 transform hover:-translate-y-1 hover:scale-110"
-    >
-      {label}
-    </button>
+    <div className={`p-4 ${className}`}>
+      {children}
+    </div>
   );
 };
 
-export default BlackBox;
+export default Box;
