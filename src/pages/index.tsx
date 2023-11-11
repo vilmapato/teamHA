@@ -12,7 +12,7 @@ const Home: React.FC = () => {
       <main className="container mx-auto px-4">
         <section className="flex justify-between items-center py-12">
           <div className="flex-1">
-            <h1 className="text-5xl font-bold">SuperLancersAI</h1>
+            <h1 className="text-gradient text-5xl font-bold">SuperLancersAI</h1>
             <p className="text-xl my-8">A privacy-preserving talent platform built on trust and verifiable credentials</p>
             <div className="flex gap-4">
               <BlackBox label="FIND PROJECTS" onClick={() => { /* Handle click */ }} />
@@ -50,7 +50,7 @@ const Home: React.FC = () => {
 
         <section className="flex justify-between items-end py-12">
           <div>
-            <p className="text-lg">SuperLancersAI</p>
+            <p className="text-gradient text-lg">SuperLancersAI</p>
             <p>A freelancer network built on trust and verifiable credentials</p>
           </div>
           <div className="relative w-48 h-12"> {/* Adjust the width and height as needed */}

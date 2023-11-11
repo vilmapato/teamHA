@@ -38,9 +38,7 @@ const UserProfile: React.FC = () => {
         <section className="my-10">
           <p className="text-xl">You have no stats yet.</p>
           <p>Go to the Quest Board and start applying for quests!</p>
-          <Button>
-          Go to Quest Board
-          </Button>
+          <Button>Go to Quest Board</Button>
         </section>
 
         <footer className="text-center py-10">

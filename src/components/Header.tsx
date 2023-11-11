@@ -25,7 +25,7 @@ const Header = () => {
         <div className="flex items-center">
           {" "}
           {/* Added "items-center" class */}
-          <Link href="/home">
+          <Link href="/index">
             <div className="items-center" style={{ height: "40px" }}>
               <p className="text-xl font-bold ml-2 nav-text pr-2 z-10">
                 Home
