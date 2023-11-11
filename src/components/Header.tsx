@@ -25,17 +25,17 @@ const Header = () => {
         <div className="flex items-center">
           {" "}
           {/* Added "items-center" class */}
-          <Link href="/index">
+          <Link href="/">
             <div className="items-center" style={{ height: "40px" }}>
               <p className="text-xl font-bold ml-2 nav-text pr-2 z-10">
                 Home
               </p>
             </div>
           </Link>
-          <Link href="/quests">
+          <Link href="/projects">
             <div className="items-center" style={{ height: "40px" }}>
               <p className="text-xl font-bold ml-2 nav-text pr-2 z-10">
-                Quests
+                Projects
               </p>
             </div>
           </Link>
