@@ -12,7 +12,7 @@ const Header = () => {
             <Image
               width={36}
               height={36}
-              src="/SuperLancers.png"
+              src="/SuperLancersAI.png"
               className="w-20 md:w-15"
               alt="logo"
             />

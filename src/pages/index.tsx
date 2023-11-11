@@ -1,51 +1,69 @@
-import React from "react";
-import { Typewriter } from "react-simple-typewriter";
-import Link from "next/link";
+import React from 'react';
+import Image from 'next/image';
+import Button from '../components/Button'; // Adjust the import path as necessary
+import BlackBox from '../components/BlackBox'; // Adjust the import path as necessary
+import Header from '../components/Header'; // Adjust the import path as necessary for your Header component
 
-const LandingPageContents = () => {
+const Home: React.FC = () => {
   return (
-    <div className="flex flex-col min-h-screen mx-auto max-w-6xl place-content-center">
-      <div className="flex flex-col md:flex-row items-center">
+    <div className="bg-black text-white min-h-screen">
+      <Header />
 
-        {/* Left Column (Logo) */}
-        <div className="md:w-2/5 h-[500px] pr-4 flex justify-center items-center">
-          <img src="/zkJ0M.png" alt="Logo" className="w-[300px] h-auto"/>
-        </div>
+      <main className="container mx-auto px-4">
+        <section className="flex justify-between items-center py-12">
+          <div className="flex-1">
+            <h1 className="text-5xl font-bold">SuperLancersAI</h1>
+            <p className="text-xl my-8">A privacy-preserving talent platform built on trust and verifiable credentials</p>
+            <div className="flex gap-4">
+              <BlackBox label="FIND PROJECTS" onClick={() => { /* Handle click */ }} />
+              <BlackBox label="CREATE PROJECT" onClick={() => { /* Handle click */ }} />
+            </div>
+          </div>
+          <div className="flex-initial" style={{ maxWidth: '40%', height: 'auto' }}>
+            <Image src="/landingPic.png" alt="Landing Picture" layout="responsive" width={700} height={475} />
+          </div>
+        </section>
 
-        {/* Right Column (Title and Description) */}
-        <div className="md:w-3/5 mt-4 md:mt-0 flex flex-col justify-center">
-          <h1 className="text-5xl font-bold">
-            Cancelling
-            <span className="text-gradient">
-              <Typewriter
-                words={[" Bias ", " Psychology ", " Inequality "]}
-                loop={false}
-                cursor
-                cursorStyle="|"
-                cursorColor="white"
-                typeSpeed={60}
-                deleteSpeed={90}
-                delaySpeed={1250}
-              />
-            </span>
-          </h1>
-          <p className="text-3xl mt-8 text-justify">
-            Hiding Statistical Numbers, Bet without bias
-            Anti-Psychology Thoughts, zkJ0M Bet.
-          </p>
-          <p className="text-2xl mt-8 text-justify">
-            Establishing a groundbreaking betting platform enabling users to
-            bet without being affected psychologically.
-          </p>
-          <Link href="/verification" passHref>
-            <button className="text-xl mt-8 text-gradient font-bold cursor-pointer">
-              Create an Account Now
-            </button>
-          </Link>
-        </div>
-      </div>
+        <section className="grid grid-cols-3 gap-4 py-12 text-center">
+          <div className="space-y-4">
+            <div className="inline-block relative w-32 h-32 mx-auto"> {/* Adjust the size as needed */}
+              <Image src="/onchain.png" alt="On-chain" layout="fill" objectFit="contain" />
+            </div>
+            <h2 className="text-2xl font-semibold">On-chain</h2>
+            <p>Everything on-Chain and trackable on Starknet.</p>
+          </div>
+          <div className="space-y-4">
+            <div className="inline-block relative w-32 h-32 mx-auto"> {/* Adjust the size as needed */}
+              <Image src="/verified.png" alt="Verified" layout="fill" objectFit="contain" />
+            </div>
+            <h2 className="text-2xl font-semibold">Verified</h2>
+            <p>Profiles of Organisations and Superlancers verified.</p>
+          </div>
+          <div className="space-y-4">
+            <div className="inline-block relative w-32 h-32 mx-auto"> {/* Adjust the size as needed */}
+              <Image src="/interoperable.png" alt="Interoperable" layout="fill" objectFit="contain" />
+            </div>
+            <h2 className="text-2xl font-semibold">Interoperable</h2>
+            <p>All interoperable on Starknet.</p>
+          </div>
+        </section>
+
+        <section className="flex justify-between items-end py-12">
+          <div>
+            <p className="text-lg">SuperLancersAI</p>
+            <p>A freelancer network built on trust and verifiable credentials</p>
+          </div>
+          <div className="relative w-48 h-12"> {/* Adjust the width and height as needed */}
+            <Image src="/socials.png" alt="Socials" layout="fill" objectFit="contain" />
+          </div>
+        </section>
+
+        <section className="py-4 text-center">
+          <p>&copy; 2023 CredLancers, All rights reserved.</p>
+        </section>
+      </main>
     </div>
   );
 };
 
-export default LandingPageContents;
+export default Home;
