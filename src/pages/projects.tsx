@@ -4,53 +4,64 @@ import Image from 'next/image';
 import Button from '../components/Button'; // Button for Info
 import PurpButton from '../components/PurpButton'; // Button for Start/Apply
 import BlackBox from '../components/BlackBox'; // Container for each project
+import Header from '../components/Header'; // Adding the Header component
+import PurpleButton from '@/components/PurpleButton';
+
+interface Project {
+  name: string;
+  description: string;
+  status: string;
+  reward: string;
+  image: string;
+  buttonType: string;
+}
 
 const ProjectBoard: React.FC = () => {
-  const projects = [
+  const projects: Project[] = [
     {
       name: 'Developer DAO',
       description: 'Develop LLM Model for DAO',
       status: 'Info',
       reward: '2 ETH',
       image: 'org1.png',
-      buttonType: 'Button',
+      buttonType: 'PurpleButton',
     },
     {
       name: 'Starknet',
       description: 'Write Developer Documents',
-      status: 'Start',
+      status: 'Info',
       reward: '3 ETH',
       image: 'starknet.png',
-      buttonType: 'PurpButton',
+      buttonType: 'PurpleButton',
     },
     {
       name: 'ACTxDesign',
       description: 'Write Our Documentation',
-      status: 'Apply',
+      status: 'Info',
       reward: '4 ETH',
-      image: 'black.png',
-      buttonType: 'PurpButton',
+      image: 'act.png',
+      buttonType: 'PurpleButton',
     },
     // Add other projects here...
   ];
 
   return (
     <div className="bg-black text-white min-h-screen">
+      <Header />
       <div className="container mx-auto p-4">
         <header className="text-center my-10">
           <h1 className="text-5xl font-bold mb-6">The Project Board</h1>
           <p className="mb-6">
             Lorem ipsum dolor sit amet consectetur. Cursus dictumst nec ac ac tellus placerat viverra. Pellentesque varius tortor nulla consectetur. Adipiscing a sit nibh ante. Feugiat porttitor scelerisque bibendum tincidunt semper.
           </p>
-          {/* Assuming you have a component for the tabs below */}
         </header>
 
         <main>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {projects.map((project, index) => (
+            {projects.map((project: Project, index: number) => (
               <BlackBox
                 key={index}
-                label={project.status} // Use project.status as label
+                label={project.status}
                 onClick={() => {}}
                 className="flex flex-col items-center p-6 rounded-lg space-y-4"
               >
