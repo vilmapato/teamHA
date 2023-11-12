@@ -5,7 +5,7 @@ import Header from "../components/Header";
 import Layout from "../components/Layout";
 import Button from "../components/Button";
 import BlackBox from "../components/BlackBox";
-import PurpleButton from "../components/PurpleButton"; 
+import PurpleButton from "../components/PurpleButton";
 
 const OrgProfilePage: React.FC = () => {
   const handleViewProjects = () => {
@@ -31,7 +31,8 @@ const OrgProfilePage: React.FC = () => {
           />
           <h1 className="text-4xl font-bold my-4">Dev DAO 💜</h1>
           <p className="mb-6">
-            A DAO for Builders. Lorem ipsum dolor sit amet consectetur adipiscing elit.
+            A DAO for Builders. Lorem ipsum dolor sit amet consectetur
+            adipiscing elit.
           </p>
           <Link href="/projects" passHref>
             <Button onClick={handleViewProjects}>VIEW PROJECTS</Button>
@@ -61,19 +62,39 @@ const OrgProfilePage: React.FC = () => {
         <section className="my-10">
           <div className="flex justify-around items-center">
             <div>
-              <Image src="/5stars.png" alt="Clarity of Scope rating" width={160} height={32} />
+              <Image
+                src="/5stars.png"
+                alt="Clarity of Scope rating"
+                width={160}
+                height={32}
+              />
               <p className="mt-2 font-semibold">Clarity of Scope</p>
             </div>
             <div>
-              <Image src="/4stars.png" alt="Speed rating" width={128} height={32} />
+              <Image
+                src="/4stars.png"
+                alt="Speed rating"
+                width={128}
+                height={32}
+              />
               <p className="mt-2 font-semibold">Speed</p>
             </div>
             <div>
-              <Image src="/5stars.png" alt="Communication rating" width={160} height={32} />
+              <Image
+                src="/5stars.png"
+                alt="Communication rating"
+                width={160}
+                height={32}
+              />
               <p className="mt-2 font-semibold">Communication</p>
             </div>
             <div>
-              <Image src="/5stars.png" alt="Payment rating" width={160} height={32} />
+              <Image
+                src="/5stars.png"
+                alt="Payment rating"
+                width={160}
+                height={32}
+              />
               <p className="mt-2 font-semibold">Payment</p>
             </div>
           </div>
@@ -82,17 +103,19 @@ const OrgProfilePage: React.FC = () => {
         {/* Call to Action */}
         <section className="text-center my-10">
           <h2 className="text-3xl mb-6">You have no stats yet.</h2>
-          <p className="mb-4">Go to your Dashboard and start posting projects for your community!</p>
-          <PurpleButton onClick={handleCreateProject}>Create Project</PurpleButton>
+          <p className="mb-4">
+            Go to your Dashboard and start posting projects for your community!
+          </p>
+          <PurpleButton onClick={handleCreateProject}>
+            Create Project
+          </PurpleButton>
         </section>
 
         {/* Members Section */}
         {/* Add your members section here */}
 
         {/* Footer */}
-        <footer className="py-10">
-          {/* Add your footer here */}
-        </footer>
+        <footer className="py-10">{/* Add your footer here */}</footer>
       </main>
     </Layout>
   );

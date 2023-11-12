@@ -1,8 +1,8 @@
 // ProjectDetailModal.tsx
 import React from "react";
 import Link from "next/link";
-import Button from "../components/Button"; 
-import PurpleButton from "@/components/PurpleButton"; 
+import Button from "../components/Button";
+import PurpleButton from "@/components/PurpleButton";
 
 interface ProjectDetailModalProps {
   isOpen: boolean;
@@ -71,7 +71,7 @@ const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({
         <div className="flex justify-around mb-4">
           <PurpleButton>Request</PurpleButton>
           <Link href="/dashboard" passHref>
-          <PurpleButton>Start</PurpleButton>
+            <PurpleButton>Start</PurpleButton>
           </Link>
           <PurpleButton>Save</PurpleButton>
         </div>

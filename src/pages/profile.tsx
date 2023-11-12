@@ -1,9 +1,9 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import Button from "../components/Button"; 
-import Header from "../components/Header"; 
-import Box from "../components/Box"; 
+import Button from "../components/Button";
+import Header from "../components/Header";
+import Box from "../components/Box";
 import { useRouter } from "next/router";
 
 const ProfilePage: React.FC = () => {
@@ -35,10 +35,9 @@ const ProfilePage: React.FC = () => {
           </h2>
           <h3 className="text-xl font-semibold mb-6">Community Builder</h3>
           <p className="mb-4 px-4">
-            Lorem ipsum dolor sit amet consectetur. Cursus dictumst nec ac ac
-            tellus placerat viverra. Pellentesque varius tortor nulla
-            consectetur. Adipiscing a sit nibh ante. Feugiat porttitor
-            scelerisque bibendum tincidunt semper.
+            Open to Work: Dedicated to adding value to the Integrated Web.
+            Connect with m to discuss community growth strategies and building
+            armies across the web and world.
           </p>
           <div className="flex justify-center gap-4 mt-4">
             <Button onClick={() => {}}>VIEW AVAILABILITY</Button>

@@ -1,9 +1,9 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import Button from "../components/Button"; 
-import Header from "../components/Header"; 
-import Box from "../components/Box"; 
+import Button from "../components/Button";
+import Header from "../components/Header";
+import Box from "../components/Box";
 import { useRouter } from "next/router";
 
 const ProfilePage: React.FC = () => {
@@ -35,10 +35,9 @@ const ProfilePage: React.FC = () => {
           </h2>
           <h3 className="text-xl font-semibold mb-6">Community Builder</h3>
           <p className="mb-4 px-4">
-            Lorem ipsum dolor sit amet consectetur. Cursus dictumst nec ac ac
-            tellus placerat viverra. Pellentesque varius tortor nulla
-            consectetur. Adipiscing a sit nibh ante. Feugiat porttitor
-            scelerisque bibendum tincidunt semper.
+            Open to Work: Dedicated to adding value to the Integrated Web.
+            Connect with m to discuss community growth strategies and building
+            armies across the web and world.
           </p>
           <div className="flex justify-center gap-4 mt-4">
             <Button onClick={() => {}}>VIEW AVAILABILITY</Button>
@@ -147,22 +146,39 @@ const ProfilePage: React.FC = () => {
           </div>
         </section>
 
-        <section id="congratulations" className="container mx-auto p-4 flex flex-col items-center justify-center">        <h1 className="text-4xl font-bold mb-6">Congratulations!</h1>
-        <p className="text-xl mb-6">You have earned your 1st Soul Bound Credential. Keep up to great work.</p>
-        <div className="bg-gray-800 p-6 rounded-lg shadow-lg text-center mb-6">
-          <Image src="/org1.png" width={200} height={200} alt="Organization Avatar" className="mb-4"/>
-          <h2 className="text-2xl font-bold mb-2">D.D</h2>
-          <p className="mb-4">Issued by: DevDAO</p>
-        </div>
-        <p className="mb-4">
-          Contribute content for D_D Academy. Those writing, reviewing, and editing content on our education platform are playing a role central to Developer DAO's mission to onboard the next wave of web3 contributors. Get started in the #d-d_ academy channel.
-        </p>
-        <Link href="/projects" passHref>
-          <button className="mt-4 bg-purple-500 text-white font-bold py-2 px-4 rounded-full">
-            Go to Project Board
-          </button>
-        </Link>
-      </section>
+        <section
+          id="congratulations"
+          className="container mx-auto p-4 flex flex-col items-center justify-center"
+        >
+          {" "}
+          <h1 className="text-4xl font-bold mb-6">Congratulations!</h1>
+          <p className="text-xl mb-6">
+            You have earned your 1st Soul Bound Credential. Keep up to great
+            work.
+          </p>
+          <div className="bg-gray-800 p-6 rounded-lg shadow-lg text-center mb-6">
+            <Image
+              src="/org1.png"
+              width={200}
+              height={200}
+              alt="Organization Avatar"
+              className="mb-4"
+            />
+            <h2 className="text-2xl font-bold mb-2">D.D</h2>
+            <p className="mb-4">Issued by: DevDAO</p>
+          </div>
+          <p className="mb-4">
+            Contribute content for D_D Academy. Those writing, reviewing, and
+            editing content on our education platform are playing a role central
+            to Developer DAO's mission to onboard the next wave of web3
+            contributors. Get started in the #d-d_ academy channel.
+          </p>
+          <Link href="/projects" passHref>
+            <button className="mt-4 bg-purple-500 text-white font-bold py-2 px-4 rounded-full">
+              Go to Project Board
+            </button>
+          </Link>
+        </section>
 
         <footer className="flex flex-col items-center justify-between py-10">
           <div className="text-center mb-6">
