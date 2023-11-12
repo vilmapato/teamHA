@@ -1,40 +1,64 @@
-# Superlancers action credentials on Starknet
+# SuperLancers_Starknet
+![Alt text](assets/image.png)
+## Project Description
+SuperLancers is a pioneering on-chain freelancing platform that offers a trustless solution for tapping into the talent market, featuring decentralized private payments and verifiable credentials.
 
-Working demo is deployed (here)[https://superlancers-lac.vercel.app/]
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Unique Value Proposition
 
-## Getting Started
+While many on-chain talent markets focus on identities and credentials, SuperLancers has these as basic features AND will be the first to focus on UX and ease of use to a wider userbase.
 
-First, run the development server:
+Self sovereign identities and verifiable credentials are also a core feature of SuperLancersby minting NFT credentials on-chain in a decentralized manner transparent trustless manner.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+All these features work well together to create a reimagined workplace for the on-chain future.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Problems We're Solving
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+40% of people lie on their resumes, and three out of four employers have caught a lie on someone's resume. With on-chain actions in SuperLancers leaving a digital trail for everyone's skills and activities, people can make sure that user profiles are 
+always accurate and truthful.
 
-## Learn More
+There is no decentralized job platform that allows for private transactions, and this could basically lead to issues like the whole public seeing how much you earn for a living. SuperLancers solves this by enabling private transactions and even private 
+job postings.
 
-To learn more about Next.js, take a look at the following resources:
+## Key Features:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- A digital reputation framework. view code[here]()
+- On-chain payments. view code[here]()
+- 
+  
+These features work cohesively to redefine the future of on-chain work environments.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+ Public payments are made through on-chain contracts , later we plan to support cross-chain functionality and private payment channels . 
+#### How it Works
 
-## Deploy on Vercel
+1. Freelancer signs up and writes a basic description and skills list to attract potential clients. There is no credentials on his profile yet, because it will only be filled through NFTs issued by verified organizations.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+2. He then applies for 'Quests/Projects' displayed in his/her dashboard. The Quests are posted by verified organizations, and the Freelancer can see the organization's reputation and reviews on the Quest. The Quests are also filtered by the Freelancer's skills, so he/she can only see Quests that are relevant to him/her.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+3. Lancer submits his work by marking the quest completed, which then sends an invoice to the org. If approved by the Org, the escrow is released and the platform mints an NFT credential to the Lancer which is then displayed in his profile.
+
+#### How it's Made
+We used the following technologies to build SuperLancers:
+
+-Smart contracts 
+    - **Starkent** 
+    - **Cairo language** 
+- Front-end and integration 
+    - StarknetKit
+    - Starknet React
+    - Apibara sdk
+    - React Typescript
+
+
+
+----------------------------------------------------------------
+
+## Demo/ Gallery 
+
+![Alt text](assets/image4.png)
+![Alt text](assets/image-1.png)
+![Alt text](image-2.png)
+-----------------
+SuperLancers is leading the way in reimagining the freelancing landscape by prioritizing privacy, accuracy, and user experience. Join us on this innovative journey as we revolutionize on-chain work environments and empower users with a trustless, private, and secure platform.
+
