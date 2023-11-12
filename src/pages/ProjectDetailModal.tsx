@@ -1,7 +1,8 @@
 // ProjectDetailModal.tsx
 import React from "react";
-import Button from "../components/Button"; // Ensure this is the correct path to your Button component
-import PurpleButton from "@/components/PurpleButton"; // Ensure this is the correct import path
+import Link from "next/link";
+import Button from "../components/Button"; 
+import PurpleButton from "@/components/PurpleButton"; 
 
 interface ProjectDetailModalProps {
   isOpen: boolean;
@@ -69,7 +70,9 @@ const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({
 
         <div className="flex justify-around mb-4">
           <PurpleButton>Request</PurpleButton>
+          <Link href="/dashboard" passHref>
           <PurpleButton>Start</PurpleButton>
+          </Link>
           <PurpleButton>Save</PurpleButton>
         </div>
       </div>

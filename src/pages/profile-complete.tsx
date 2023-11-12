@@ -147,16 +147,22 @@ const ProfilePage: React.FC = () => {
           </div>
         </section>
 
-        <section className="text-center my-10">
-          <p className="text-xl mb-2">You have no stats yet.</p>
-          <p className="mb-4">
-            Go to the Quest Board and start applying for quests!
-          </p>
-          {/* Update this part to use the Link component */}
-          <Link href="/projects" passHref>
-            <Button>Go to Quest Board</Button>
-          </Link>
-        </section>
+        <section id="congratulations" className="container mx-auto p-4 flex flex-col items-center justify-center">        <h1 className="text-4xl font-bold mb-6">Congratulations!</h1>
+        <p className="text-xl mb-6">You have earned your 1st Soul Bound Credential. Keep up to great work.</p>
+        <div className="bg-gray-800 p-6 rounded-lg shadow-lg text-center mb-6">
+          <Image src="/org1.png" width={200} height={200} alt="Organization Avatar" className="mb-4"/>
+          <h2 className="text-2xl font-bold mb-2">D.D</h2>
+          <p className="mb-4">Issued by: DevDAO</p>
+        </div>
+        <p className="mb-4">
+          Contribute content for D_D Academy. Those writing, reviewing, and editing content on our education platform are playing a role central to Developer DAO's mission to onboard the next wave of web3 contributors. Get started in the #d-d_ academy channel.
+        </p>
+        <Link href="/projects" passHref>
+          <button className="mt-4 bg-purple-500 text-white font-bold py-2 px-4 rounded-full">
+            Go to Project Board
+          </button>
+        </Link>
+      </section>
 
         <footer className="flex flex-col items-center justify-between py-10">
           <div className="text-center mb-6">

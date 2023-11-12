@@ -1,10 +1,11 @@
 import React from "react";
+import Link from "next/link";
 import Image from "next/image";
 import Header from "../components/Header";
 import Layout from "../components/Layout";
 import Button from "../components/Button";
 import BlackBox from "../components/BlackBox";
-import PurpleButton from "../components/PurpleButton"; // Assuming this is the correct component for purple buttons
+import PurpleButton from "../components/PurpleButton"; 
 
 const OrgProfilePage: React.FC = () => {
   const handleViewProjects = () => {
@@ -32,7 +33,9 @@ const OrgProfilePage: React.FC = () => {
           <p className="mb-6">
             A DAO for Builders. Lorem ipsum dolor sit amet consectetur adipiscing elit.
           </p>
-          <Button onClick={handleViewProjects}>VIEW PROJECTS</Button>
+          <Link href="/projects" passHref>
+            <Button onClick={handleViewProjects}>VIEW PROJECTS</Button>
+          </Link>
         </section>
 
         {/* Org Stats */}

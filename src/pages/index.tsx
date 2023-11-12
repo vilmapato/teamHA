@@ -1,9 +1,9 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import Button from '../components/Button'; // Adjust the import path as necessary
-import BlackBox from '../components/BlackBox'; // Adjust the import path as necessary
-import Header from '../components/Header'; // Adjust the import path as necessary for your Header component
+import Button from '../components/Button'; 
+import Header from '../components/Header';
+import BlackBox from '../components/BlackBox'; 
 
 const Home: React.FC = () => {
   return (
