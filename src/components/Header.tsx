@@ -4,12 +4,70 @@ import Link from "next/link";
 import dynamic from "next/dynamic";
 import Button from "./Button";
 import { connect, disconnect } from 'starknetkit'
+import { truncateStr } from './../utils.js'
 
 const Header = () => {
 
+  const [connection, setConnection] = useState('');
+
+const [account, setAccount] = useState('');
+
+const [address, setAddress] = useState('');
+
+const [provider, setProvider] = useState('');
+
+  const connectWallet = async() => {
+
+    console.log("test")
+
+    // const connection = await connect({ 
+    
+    //     modalMode: "neverAsk", webWalletUrl: "https://web.argent.xyz" 
+    
+    // });
+
+    const connection = await connect();
+    
+     if(connection && connection.isConnected){
+    
+         setConnection(connection);
+    
+         setProvider(connection.account);
+    
+         setAddress(connection.selectedAddress);
+    
+     }
+    
+    }
+
+    const disconnectWallet = async() => {
+
+      await disconnect();
+   
+      setConnection(undefined);
+   
+      setProvider(undefined);
+   
+      setAddress('');
+   }
+
   useEffect(() => {
     (async () => {
-      const connection = await connect()
+      const connection = await connect({ 
+
+        modalMode: "neverAsk", webWalletUrl: "https://web.argent.xyz" 
+  
+    }); 
+ 
+    if(connection && connection.isConnected){
+ 
+      setConnection(connection);
+ 
+      setProvider(connection.account);
+ 
+      setAddress(connection.selectedAddress);
+ 
+    }
     })();
   }, []);
 
@@ -63,12 +121,11 @@ const Header = () => {
             </div>
           </Link>
           <div className="items-center">
-            <Link href="/betNow">
-              <Button>
-                {/* Use the Button component here */}
+              {address ? (<Button onClick={disconnectWallet}>
+                {truncateStr(address)}
+              </Button>) : (<Button onClick={connectWallet}>
                 Connect Wallet
-              </Button>
-            </Link>
+              </Button>)}
           </div>
         </div>
       </div>
