@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import Image from "next/image";
 import Button from "../components/Button"; // Ensure this is the correct path to your Button component
 import Header from "../components/Header"; // Ensure this is the correct path to your Header component
@@ -16,7 +17,7 @@ const ProfilePage: React.FC = () => {
       <Header />
 
       <main className="container mx-auto p-4">
-      <section className="text-center my-10">
+        <section className="text-center my-10">
           <div className="inline-block relative p-4 rounded-full mb-4">
             <Image
               src="/avatar.png"
@@ -48,22 +49,42 @@ const ProfilePage: React.FC = () => {
 
         {/* Ratings Section */}
         <section className="text-center my-16">
-          <h3 className="text-2xl font-bold mb-4">Ratings</h3> 
+          <h3 className="text-2xl font-bold mb-4">Ratings</h3>
           <div className="flex justify-around items-center">
             <div>
-              <Image src="/5stars.png" alt="Clarity of Scope rating" width={160} height={32} />
+              <Image
+                src="/5stars.png"
+                alt="Clarity of Scope rating"
+                width={160}
+                height={32}
+              />
               <p className="font-semibold">Clarity of Scope</p>
             </div>
             <div>
-              <Image src="/4stars.png" alt="Speed rating" width={128} height={32} />
+              <Image
+                src="/4stars.png"
+                alt="Speed rating"
+                width={128}
+                height={32}
+              />
               <p className="font-semibold">Speed</p>
             </div>
             <div>
-              <Image src="/4stars.png" alt="Communication rating" width={128} height={32} />
+              <Image
+                src="/4stars.png"
+                alt="Communication rating"
+                width={128}
+                height={32}
+              />
               <p className="font-semibold">Communication</p>
             </div>
             <div>
-              <Image src="/5stars.png" alt="Payment rating" width={160} height={32} />
+              <Image
+                src="/5stars.png"
+                alt="Payment rating"
+                width={160}
+                height={32}
+              />
               <p className="font-semibold">Payment</p>
             </div>
           </div>
@@ -131,7 +152,10 @@ const ProfilePage: React.FC = () => {
           <p className="mb-4">
             Go to the Quest Board and start applying for quests!
           </p>
-          <Button onClick={() => {}}>Go to Quest Board</Button>
+          {/* Update this part to use the Link component */}
+          <Link href="/projects" passHref>
+            <Button>Go to Quest Board</Button>
+          </Link>
         </section>
 
         <footer className="flex flex-col items-center justify-between py-10">

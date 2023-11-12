@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import Image from 'next/image';
 import Button from '../components/Button'; // Adjust the import path as necessary
 import BlackBox from '../components/BlackBox'; // Adjust the import path as necessary
@@ -15,8 +16,12 @@ const Home: React.FC = () => {
             <h1 className="text-gradient text-5xl font-bold">SuperLancersAI</h1>
             <p className="text-xl my-8">A privacy-preserving talent platform built on trust and verifiable credentials</p>
             <div className="flex gap-4">
-              <BlackBox label="FIND PROJECTS" onClick={() => { /* Handle click */ }} />
-              <BlackBox label="CREATE PROJECT" onClick={() => { /* Handle click */ }} />
+              <Link href="/projects" passHref>
+                <BlackBox label="FIND PROJECTS" onClick={() => {}} />
+              </Link>
+              <Link href="/projects" passHref>
+                <BlackBox label="CREATE PROJECT" onClick={() => {}} />
+              </Link>
             </div>
           </div>
           <div className="flex-1" style={{ maxWidth: '35%', marginLeft: '0%' }}> {/* Reduced size and reset margin */}

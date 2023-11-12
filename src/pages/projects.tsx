@@ -1,10 +1,9 @@
 // projects.tsx
 import React, { useState } from 'react';
 import Image from 'next/image';
-import Button from '../components/Button';
-import PurpleButton from '../components/PurpleButton';
-import BlackBox from '../components/BlackBox';
 import Header from '../components/Header';
+import BlackBox from '../components/BlackBox';
+import PurpleButton from '../components/PurpleButton';
 import ProjectDetailModal from './ProjectDetailModal';
 
 interface Project {
@@ -61,7 +60,7 @@ const ProjectBoard: React.FC = () => {
       timeline: 'Due Jan 10-24',
       budget: '8 ETH'
     },
-    // Add other projects here...
+    // Add other projects vv
   ];
 
   const handlePurpleButtonClick = (project: Project) => {
