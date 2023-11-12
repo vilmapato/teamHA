@@ -31,8 +31,11 @@ const OrgProfilePage: React.FC = () => {
           />
           <h1 className="text-4xl font-bold my-4">Dev DAO 💜</h1>
           <p className="mb-6">
-            A DAO for Builders. Lorem ipsum dolor sit amet consectetur
-            adipiscing elit.
+          A DAO for Builders
+          Build web3 with friends.
+          Developer DAO is a community of thousands 
+          of web3 builders creating a better internet. 
+          Join us and create the future.
           </p>
           <Link href="/projects" passHref>
             <Button onClick={handleViewProjects}>VIEW PROJECTS</Button>
