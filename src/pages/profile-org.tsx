@@ -109,9 +109,11 @@ const OrgProfilePage: React.FC = () => {
           <p className="mb-4">
             Go to your Dashboard and start posting projects for your community!
           </p>
+          <Link href="/create-project" passHref>
           <PurpleButton onClick={handleCreateProject}>
             Create Project
           </PurpleButton>
+          </Link>
         </section>
 
         {/* Members Section */}
