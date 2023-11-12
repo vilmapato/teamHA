@@ -18,7 +18,8 @@
     "react": "^18",
     "react-dom": "^18",
     "react-simple-typewriter": "^5.0.1",
-    "starknet": "^5.19.5"
+    "starknet": "^5.19.5",
+    "starknetkit": "^1.0.12"
   },
   "devDependencies": {
     "@types/node": "^20",

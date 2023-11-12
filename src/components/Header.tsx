@@ -1,9 +1,18 @@
+import React, { useState, useEffect, useContext, useCallback } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import dynamic from "next/dynamic";
 import Button from "./Button";
+import { connect, disconnect } from 'starknetkit'
 
 const Header = () => {
+
+  useEffect(() => {
+    (async () => {
+      const connection = await connect()
+    })();
+  }, []);
+
   return (
     <header className="sticky top-0 z-40 scrolled-header py-2">
       <div className="py-4 flex items-center justify-between mx-12">
