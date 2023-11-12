@@ -36,7 +36,7 @@ const ProfilePage: React.FC = () => {
           <h3 className="text-xl font-semibold mb-6">Community Builder</h3>
           <p className="mb-4 px-4">
             Open to Work: Dedicated to adding value to the Integrated Web.
-            Connect with m to discuss community growth strategies and building
+            Connect with me to discuss community growth strategies and building
             armies across the web and world.
           </p>
           <div className="flex justify-center gap-4 mt-4">
