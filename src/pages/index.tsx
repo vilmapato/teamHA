@@ -10,8 +10,8 @@ const Home: React.FC = () => {
       <Header />
 
       <main className="container mx-auto px-4">
-        <section className="flex justify-between items-center py-12">
-          <div className="flex-1">
+        <section className="flex items-center py-12">
+          <div className="flex-1 min-w-0">
             <h1 className="text-gradient text-5xl font-bold">SuperLancersAI</h1>
             <p className="text-xl my-8">A privacy-preserving talent platform built on trust and verifiable credentials</p>
             <div className="flex gap-4">
@@ -19,8 +19,14 @@ const Home: React.FC = () => {
               <BlackBox label="CREATE PROJECT" onClick={() => { /* Handle click */ }} />
             </div>
           </div>
-          <div className="flex-initial" style={{ maxWidth: '40%', height: 'auto' }}>
-            <Image src="/landingPic.png" alt="Landing Picture" layout="responsive" width={700} height={475} />
+          <div className="flex-1" style={{ maxWidth: '35%', marginLeft: '0%' }}> {/* Reduced size and reset margin */}
+            <Image 
+              src="/landingPic.png" 
+              alt="Landing Picture" 
+              layout="responsive" 
+              width={525} /* Reduced width */
+              height={356.25} /* Reduced height */
+            />
           </div>
         </section>
 
