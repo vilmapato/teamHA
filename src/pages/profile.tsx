@@ -3,14 +3,20 @@ import Image from "next/image";
 import Button from "../components/Button"; // Ensure this is the correct path to your Button component
 import Header from "../components/Header"; // Ensure this is the correct path to your Header component
 import Box from "../components/Box"; // Ensure this is the correct path to your Box component
+import { useRouter } from "next/router";
 
 const ProfilePage: React.FC = () => {
+  const router = useRouter(); // Initialize the router
+
+  const handleViewOrganisation = () => {
+    router.push("/profile-org"); // Redirect to '/profile-org'
+  };
   return (
     <div className="bg-black text-white min-h-screen">
       <Header />
 
       <main className="container mx-auto p-4">
-        <section className="text-center my-10">
+      <section className="text-center my-10">
           <div className="inline-block relative p-4 rounded-full mb-4">
             <Image
               src="/avatar.png"
@@ -33,7 +39,34 @@ const ProfilePage: React.FC = () => {
             consectetur. Adipiscing a sit nibh ante. Feugiat porttitor
             scelerisque bibendum tincidunt semper.
           </p>
-          <Button onClick={() => {}}>VIEW AVAILABILITY</Button>
+          <div className="flex justify-center gap-4 mt-4">
+            <Button onClick={() => {}}>VIEW AVAILABILITY</Button>
+            <Button onClick={() => {}}>EDIT PROFILE</Button>
+            <Button onClick={handleViewOrganisation}>VIEW ORGANISATION</Button>
+          </div>
+        </section>
+
+        {/* Ratings Section */}
+        <section className="text-center my-16">
+          <h3 className="text-2xl font-bold mb-4">Ratings</h3> 
+          <div className="flex justify-around items-center">
+            <div>
+              <Image src="/5stars.png" alt="Clarity of Scope rating" width={160} height={32} />
+              <p className="font-semibold">Clarity of Scope</p>
+            </div>
+            <div>
+              <Image src="/4stars.png" alt="Speed rating" width={128} height={32} />
+              <p className="font-semibold">Speed</p>
+            </div>
+            <div>
+              <Image src="/4stars.png" alt="Communication rating" width={128} height={32} />
+              <p className="font-semibold">Communication</p>
+            </div>
+            <div>
+              <Image src="/5stars.png" alt="Payment rating" width={160} height={32} />
+              <p className="font-semibold">Payment</p>
+            </div>
+          </div>
         </section>
 
         <section className="flex flex-wrap justify-center items-center my-10 gap-10">
