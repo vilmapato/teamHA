@@ -1,8 +1,6 @@
 import { StreamClient } from '@apibara/protocol'
 import { StarkNetCursor, Filter, FieldElement, v1alpha2 as starknet } from '@apibara/starknet'
 import { hash } from 'starknet'
-// import { finality, DataFinality  } from "@apibara/indexer";
-// import { Config, finality, DataFinality } from "http://esm.run/@apibara/indexer";
 
 const DataFinality = {
     DATA_STATUS_UNKNOWN: 0,

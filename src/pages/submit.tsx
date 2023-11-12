@@ -9,7 +9,7 @@ interface Task {
 }
 
 interface SubmitModalProps {
-  task: Task;
+  task?: Task; // Make task optional to handle undefined cases
   onClose: () => void;
   updateTaskStatus: (
     taskId: number,
@@ -23,19 +23,22 @@ const SubmitModal: React.FC<SubmitModalProps> = ({
   updateTaskStatus,
 }) => {
   const [file, setFile] = useState<File | null>(null);
-  const [submissionConfirmed, setSubmissionConfirmed] =
-    useState<boolean>(false);
+  const [submissionConfirmed, setSubmissionConfirmed] = useState<boolean>(false);
 
   const handleSubmit = async () => {
-    if (file) {
-      updateTaskStatus(task.id, "Under Review");
-      // Simulate file submission
-      setTimeout(() => {
-        setSubmissionConfirmed(true); // Update the state to show the confirmation message
-      }, 1000); // You can adjust the timeout as needed
-    } else {
+    if (!file) {
       alert("Please select a file to submit.");
+      return;
     }
+    if (!task || task.id === undefined) {
+      alert("Invalid task details.");
+      return;
+    }
+    updateTaskStatus(task.id, "Under Review");
+    // Simulate file submission
+    setTimeout(() => {
+      setSubmissionConfirmed(true); // Update the state to show the confirmation message
+    }, 1000); // You can adjust the timeout as needed
   };
 
   const handleConfirmationClose = () => {
@@ -43,6 +46,11 @@ const SubmitModal: React.FC<SubmitModalProps> = ({
     onClose();
     router.push("/profile-complete#congratulations"); // Use the router to navigate
   };
+
+  // If task is not provided, return null or a placeholder
+  if (!task) {
+    return <div>Task details not available.</div>;
+  }
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">

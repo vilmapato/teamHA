@@ -4,6 +4,7 @@
     "@apibara/indexer": "^0.2.2",
     "@apibara/protocol": "^0.4.8",
     "@apibara/starknet": "^0.3.1",
+    "dotenv": "^16.3.1",
     "starknet": "^5.19.5"
   }
 }
