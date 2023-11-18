@@ -12,14 +12,21 @@
     "@starknet-react/chains": "^0.0.0",
     "@starknet-react/core": "^1.0.4",
     "@types/next": "^9.0.0",
+    "@walletconnect/client": "^1.8.0",
+    "@walletconnect/ethereum-provider": "^2.10.1",
+    "@walletconnect/modal": "^2.6.0",
+    "@web3modal/ethers5": "^3.3.2",
+    "ethers": "^5.7.2",
     "get-starknet-core": "^3.2.0",
     "next": "^14.0.2",
+    "package.json": "^2.0.1",
     "prop-types": "^15.8.1",
     "react": "^18",
     "react-dom": "^18",
     "react-simple-typewriter": "^5.0.1",
-    "starknet": "^5.19.5",
-    "starknetkit": "^1.0.12"
+    "starknet": "^5.18.0",
+    "starknetkit": "^1.0.12",
+    "web3modal": "^1.9.12"
   },
   "devDependencies": {
     "@types/node": "^20",

@@ -3,6 +3,7 @@ import React from 'react'
 import RootLayout from '../components/Layout'
 
 
+
 interface AppProps {
   Component: React.ElementType;
   pageProps: any;

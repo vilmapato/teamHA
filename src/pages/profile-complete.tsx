@@ -40,7 +40,7 @@ const ProfilePage: React.FC = () => {
             armies across the web and world.
           </p>
           <div className="flex justify-center gap-4 mt-4">
-            <Button onClick={() => {}}>VIEW AVAILABILITY</Button>
+            <Button onClick={() => {}}>VIEW CREDENTIALS</Button>
             <Button onClick={() => {}}>EDIT PROFILE</Button>
             <Button onClick={handleViewOrganisation}>VIEW ORGANISATION</Button>
           </div>
